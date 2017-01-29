@@ -1,8 +1,6 @@
 
-# Creating Term-Document Matrix from Elasticsearch
+# Term-Document Matrix from Elasticsearch
 
-####Tutorial by Animesh Pandey, email: apanimesh061@gmail.com
-***
 There have been many questions about how can we create a Term-Document matrix from an ElasticSearch index. I tried out a possible way which I think should work well. I will be starting from scratch and this whole method is divided into three parts
 
 1. Initialising Index
@@ -10,7 +8,7 @@ There have been many questions about how can we create a Term-Document matrix fr
 3. Querying for Term-Vectors
 4. Creating a Term-Document Matrix
 
-####Libraries used:
+Libraries used:
 
 1. Python Version: 2.7.4 with Numpy/Scipy
 2. ElasticSearch Version: 1.6.0
