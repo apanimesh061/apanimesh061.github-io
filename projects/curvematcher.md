@@ -16,12 +16,10 @@ I will be discussing about the algorithms and techniques that I used to solve th
 The console application that I built takes in CSV (Comma Seperated Values) as an inputs. 
 
 1. Point the application to a directory which has a number of CSV files.
-2. Choose 2 CSV files
- 1. Reference File
- 2. Test File
+2. Choose 2 CSV files where there is one `Reference` and one `Test` file
 
-    Reference file is the file with which the Test file is compared and the `relative error` and `correlation coefficient` is reported.
-    Operations that return peaks and other features are related to the individual graphs.
+   Reference file is the file with which the Test file is compared and the `relative error` and `correlation coefficient` is reported.
+   Operations that return peaks and other features are related to the individual graphs.
 3. Make sure that the CSVs have a similar strucure. You cannot compare two plots if they do not have same number of data points.
 4. Each CSV should have a title on top of each columns.
 5. A CSV could have more than 2 colums. I have assumed that the first coolumn represents the `x-axis` and all subsequent colums are `y-axes` which are 0-indexed. You have to enter the index of the columnn. This index will the `y-axis` of the plot being considered.
