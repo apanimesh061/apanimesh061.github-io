@@ -3,19 +3,21 @@
 **Problem Statement:** How can I find peaks and troughs of a graph? How to find relative error and correlation between two graphs?
 
 **Languages:** C++
+
 **Build Tool:** CMake 3.5
+
 **Additional Libraries:** Boost 1.61.0
 
 I will be discussing about the algorithms and techniques that I used to solve the above mentioned problem.
 
-#####Input Type
+####Input Type
 The console application that I built takes in CSV (Comma Seperated Values) as an inputs. 
 
 1. Point the application to a directory which has a number of CSV files.
 2. Choose 2 CSV files
-    a. Reference File
-    b. Test File
-
+ 1. Reference File
+ 2. Test File
+    
     Reference file is the file with which the Test file is compared and the `relative error` and `correlation coefficient` is reported.
     Operations that return peaks and other features are related to the individual graphs.
 3. Make sure that the CSVs have a similar strucure. You cannot compare two plots if they do not have same number of data points.
@@ -24,7 +26,7 @@ The console application that I built takes in CSV (Comma Seperated Values) as an
 
 - - -
 
-#####Extracting significant features
+####Extracting significant features
 
 Lets take the following example:
 ![input1](images/original_cro.png)
@@ -44,7 +46,7 @@ After smoothing the graph looks like this:
 ![input1](images/original_cro_gaussed.png)
 You can notice that the significant features are still visible but all the smaller peaks and ridges have disappeared. But, you'll also see that values on the `y-axis` are heavily inflated so we cannot really rely on the values. Instead, we'll look for the indices of the features and use those indices to get the values from the original input.
 
-######Baseine Reduction
+####Baseine Reduction
 Now that we have smoothed the plot, we need to get rid of the very low values in the data. This could be done using a **Top Hat Filter**. The top-hat filter is a morphological filter that uses basic morphological operations `erosion` and `dilation` to remove baseline in the raw data.
 
 I could find any implementation of top-hat filters in C++. So, I tried to replicate the procedure used in `scipy`'s `ndimage` module.
@@ -58,7 +60,7 @@ We run both on the data in order to reduce the basline with respect to the peaks
 
 You can see that both the top-hat filters point to different type of features.
 
-######High Pass Filter
+####High Pass Filter
 Now we have reduced our baseline but we still might be have some small values still left over. So for that we could implement a high pass filter which nothing but cut-off value for the data which in our case of the average value of the raw data.
 
 After this we can directly compute the `First Order Derivative` of the high-pass filter output. This is nothing but the different of successive pair of the data points where the peaks would have `zero-corssing`.
@@ -67,14 +69,14 @@ Following is the derivative of the output of high-pass filter output of the Blac
 ![input1](images/cro_fod.png)
 You can see that peaks have `zero-crossings`.
 
-#####Issues
+####Issues
 
-######Data Loss from Smoothing
+#####Data Loss from Smoothing
 When we smooth using a gaussian filter, the data tries not fit itself into a bell curve as a result of which there is a loss of data. During this the shape of the resulting smoothed data might be a little shifted to left or right of the actaul data points. It was noticed that in some cases the index returned after `zero-crossing` check was 1-5 indices away from actaul peak in the raw data.
 
 So, a function `local_search` was created which does local minima/maxima search within a window of 10 indices on the left as well as right of the index we get from `zero-crossing` check.
 
-######Normalization
+#####Normalization
 The input data can we in any quadrant on an `x-y` plane and also in any range. So, in order to scale the raw data on the first quadrant without losing the shape of the data, we do a `min-max normalisation`. This fits the data between [0.0, 1.0]. The formula is:
 ![input1](images/norm_form.png)
 
@@ -84,14 +86,16 @@ Following an example of raw input data:
 After `min-max normalisation`, the data above looks like:
 ![input1](images/original_stream.png)
 
-#####Data Comparison
+####Data Comparison
 Two metrics have been chosen to compare the data points:
+
 1. Relative Squared Error
 ![input1](images/error.png)
+
 2. Pearson Correlation
 ![input1](images/pcc.svg)
 
-#####Output
+####Output
 
 Reference Data: file 4.csv
 ![input1](images/Ref.png)
