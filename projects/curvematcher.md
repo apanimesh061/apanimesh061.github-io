@@ -17,7 +17,7 @@ The console application that I built takes in CSV (Comma Seperated Values) as an
 2. Choose 2 CSV files
  1. Reference File
  2. Test File
-    
+
     Reference file is the file with which the Test file is compared and the `relative error` and `correlation coefficient` is reported.
     Operations that return peaks and other features are related to the individual graphs.
 3. Make sure that the CSVs have a similar strucure. You cannot compare two plots if they do not have same number of data points.
@@ -156,3 +156,8 @@ Peaks/Troughs for Test data (in S11(DEG)): [-178.905, 54.7224, -179.453, 22.4436
 Normalized Squared Error: 2.12175 %
 Pearson Correlation: 0.958821
 ```
+
+- - -
+
+#### Future Work
+Currently the build was done using `CMake`. I am currently trying to make this work on Visual Studio 2015 with a GUI Interface created using QT Framework.
