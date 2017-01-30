@@ -17,8 +17,8 @@ The console application that I built takes in CSV (Comma Seperated Values) as an
 
 1. Point the application to a directory which has a number of CSV files.
 2. Choose 2 CSV files
- 1. Reference File
- 2. Test File
+ * Reference File
+ * Test File
 
     Reference file is the file with which the Test file is compared and the `relative error` and `correlation coefficient` is reported.
     Operations that return peaks and other features are related to the individual graphs.
