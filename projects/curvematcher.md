@@ -93,7 +93,7 @@ Two metrics have been chosen to compare the data points:
 ![input1](images/error.png)
 
 2. Pearson Correlation
-![input1](images/pcc.svg)
+![input1](images/pcc.gif)
 
 ####Output
 
@@ -104,7 +104,8 @@ Test Data: file 5.csv
 ![input1](images/test.png)
 
 When the program is run, we get the following output:
-```shell
+
+```bash
 > CurveMatcher.exe ..\\..\\data
 ID.     FILENAME
 0.      ..\\..\\data\file 1.csv
