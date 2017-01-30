@@ -9,7 +9,7 @@ I am currently working as a Software Development Engineer at [Audible](http://ww
 I will be posting about some of the projects I do. I have posted about the following projects:
 
 1. [Term-Document Matrix from Elasticsearch and Python](https://apanimesh061.github.io/projects/esTermDocMat)
-2. [Curve Matching usiong C++](https://apanimesh061.github.io/projects/curvematcher)
+2. [Curve Matching/Peak-Ridge Extraction using C++](https://apanimesh061.github.io/projects/curvematcher)
 
 Web presence:
 
