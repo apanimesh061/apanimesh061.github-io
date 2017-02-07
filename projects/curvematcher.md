@@ -160,4 +160,4 @@ Pearson Correlation: 0.958821
 - - -
 
 #### Part II
-Currently the build was done using `CMake`. I tried to make a version that runs on Visual Studio 2015 and a GUI interface using Windows Forms. I have discussed about it [here]().
+Currently the build was done using `CMake`. I tried to make a version that runs on Visual Studio 2015 and a GUI interface using Windows Forms. I have discussed about it [here](https://apanimesh061.github.io/projects/curvematchergui).
