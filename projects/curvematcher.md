@@ -159,7 +159,7 @@ Pearson Correlation: 0.958821
 
 - - -
 
-#### [Part II](#part2)
+[Part II](#part2)
 Currently the build was done using `CMake`. I tried to make a version that runs on Visual Studio 2015 and a GUI interface using Windows Forms. The application has been named **FeatureFinder**.
 
 **Languages:** Visual C++
