@@ -10,7 +10,7 @@ I will be posting about some of the projects I do. I have posted about the follo
 
 1. [Term-Document Matrix from Elasticsearch and Python](https://apanimesh061.github.io/projects/esTermDocMat)
 2. [Curve Matching/Peak-Ridge Extraction using C++ (Part I)](https://apanimesh061.github.io/projects/curvematcher)
-3. [Curve Matching/Peak-Ridge Extraction using C++ (Part II)](https://apanimesh061.github.io/projects/curvematchergui)
+3. [Curve Matching/Peak-Ridge Extraction using C++ (Part II)](https://apanimesh061.github.io/projects/curvematcher)
    * Using Visual C++ and Windows Forms.
 
 Web presence:
