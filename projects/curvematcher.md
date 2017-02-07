@@ -159,5 +159,5 @@ Pearson Correlation: 0.958821
 
 - - -
 
-#### Future Work
-Currently the build was done using `CMake`. I am currently trying to make this work on Visual Studio 2015 with a GUI Interface created using QT Framework.
+#### Part II
+Currently the build was done using `CMake`. I tried to make a version that runs on Visual Studio 2015 and a GUI interface using Windows Forms. I have discussed about it [here]().
