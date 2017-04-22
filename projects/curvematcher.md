@@ -171,6 +171,7 @@ Currently the build was done using `CMake`. I tried to make a version that runs 
 #### Snapshots
 
 This is how the actual GUI looks like:
+
 ![snapshot](images/snapshot.jpg)
 
 ##### Glossary
@@ -186,9 +187,11 @@ This is how the actual GUI looks like:
 
 
 After you choose a folder that has CSV files:
+
 ![snapshot2](images/snapshot2.jpg)
 
 After you click `Process`:
+
 ![snapshot3](images/snapshot3.jpg)
 
 
