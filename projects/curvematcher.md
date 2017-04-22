@@ -98,9 +98,11 @@ After `min-max normalisation`, the data above looks like:
 Two metrics have been chosen to compare the data points:
 
 1. Relative Squared Error
+
 ![input1](images/error.png)
 
 2. Pearson Correlation
+
 ![input1](images/pcc.gif)
 
 - - -
